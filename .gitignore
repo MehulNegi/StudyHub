@@ -39,3 +39,27 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local agent state (portable repository exclusions)
+/.freebuff/
+/.kilo/
+/.agents/
+/.codex/
+/.aws/
+
+# Credentials and private learning documents; publish PDFs through reviewed Storage flows
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+credentials.json
+service-account*.json
+*.pdf
+*.PDF
+*.dump
+*.backup
+
+# Local diagnostic only: omit raw database output route from Git-based deployments.
+# This does not disable the route in builds made from this local working directory.
+/app/test-supabase/

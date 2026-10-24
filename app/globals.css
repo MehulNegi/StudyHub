@@ -1,26 +1,59 @@
 @import "tailwindcss";
 
+/* StudyHub design tokens — values taken from the Figma file (dark mode only). */
+@theme {
+  --color-canvas: #0b1121;
+  --color-surface: #111827;
+  --color-raised: #1c212b;
+  --color-inset: #151b26;
+  --color-document: #0d1423;
+  --color-line: #1e293b;
+  --color-line-strong: #334155;
+
+  --color-fg-strong: #f8fafc;
+  --color-fg: #e5e7eb;
+  --color-muted: #94a3b8;
+  --color-subtle: #64748b;
+
+  --color-primary: #6f91c8;
+  --color-terminal: #63a6b3;
+  --color-prompt: #6fa58b;
+
+  --color-completed: #6fa58b;
+  --color-review: #b9a15a;
+  --color-struggling: #b96f72;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-roboto-mono), ui-monospace, monospace;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+  /* Header (64px + 1px border), plus the 28px preview banner when shown. */
+  --chrome-height: 65px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root[data-preview] {
+  --chrome-height: 93px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    background: var(--color-canvas);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  input[type="search"]::-webkit-search-cancel-button {
+    appearance: none;
+  }
+
+  ::selection {
+    background: #6f91c84d;
+  }
 }

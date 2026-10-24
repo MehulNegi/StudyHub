@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="44" height="10" viewBox="0 0 44 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Window controls" clip-path="url(#clip0_0_22)">
+<circle id="Close" cx="5" cy="5" r="5" fill="#ED6A5E"/>
+<circle id="Minimize" cx="22" cy="5" r="5" fill="#F4BF4F"/>
+<circle id="Maximize" cx="39" cy="5" r="5" fill="#61C454"/>
+</g>
+<defs>
+<clipPath id="clip0_0_22">
+<rect width="44" height="10" fill="white"/>
+</clipPath>
+</defs>
+</svg>
